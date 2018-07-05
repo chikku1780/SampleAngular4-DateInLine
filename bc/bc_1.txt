@@ -1,0 +1,133 @@
+<div class="row">
+  <app-day-picker [(day)]="day" (click)="onDayChange($event.target.value)"></app-day-picker>
+  <app-month-picker [(month)]="month" [monthList]="monthList" [(year)]="year"
+                    (change)="onMonthChange($event.target.value)"></app-month-picker>
+  <app-year-picker [(year)]="year" (voted)="onVoted($event)"></app-year-picker>
+</div>
+<!--<div class="row">-->
+<!--<app-vote-taker></app-vote-taker>-->
+<!--</div>-->
+
+
+onVoted(agreed: string) {
+    console.log(agreed);
+  }
+
+
+import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
+
+@Component({
+  selector: 'app-year-picker',
+  // templateUrl: './year-picker.component.html',
+  styleUrls: ['./year-picker.component.css'],
+  template: `
+    <span>
+      <select class="form-control" (change)="onChangeYear($event)">
+        <option *ngFor="let y of years" [selected]="yy === y ">{{y}}</option>
+      </select>
+    </span>
+  `
+})
+export class YearPickerComponent implements OnInit {
+
+  @Input('year') year: string;
+  @Output() voted = new EventEmitter<string>();
+
+  constructor() {
+  }
+
+  public years: number[] = [];
+  public yy: number;
+
+  ngOnInit() {
+    this.getYear();
+  }
+
+  getYear() {
+    this.yy = parseInt(this.year, 10);
+    for (let i = (this.yy - 100); i <= this.yy; i++) {
+      this.years.push(i);
+    }
+  }
+
+  onChangeYear(year) {
+    this.voted.emit(year);
+    console.log(year);
+  }
+
+}
+
+console.log(el.value.seq, parseInt(el.value.seq, 10), this.month);
+      console.log(typeof el.value.seq);
+      console.log(typeof parseInt(el.value.seq, 10));
+      console.log(typeof this.month);
+
+      <!--<input type="number" value="{{day}}" min="1" max="monthMax" (change)="testing()"/>-->
+
+
+
+<label class="container">One
+  <input type="radio" checked="checked" name="radio">
+  <span class="checkmark"></span>
+</label>
+
+<!--<span class="checkmark"></span>-->
+
+
+
+/* Create a custom radio button */
+.checkmark {
+  display: inline;
+  position: relative;
+  color: red;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  /*color: red;*/
+  /*content: "";*/
+  /*position: absolute;*/
+  /*display: none;*/
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+  color: red;
+  background: blue;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  color: red;
+  background: red;
+}
+
+<label class="container" *ngFor="let _day of dateRange;">
+  {{_day}}
+  <input type="radio" checked="true" name="day" value="{{_day}}">
+</label>
+
+
+      <input type="radio" name="day" class="" *ngFor="let day_ of dateRange;" id="{{day_}}">
+              <label for="{{day_}}">{{day_}}</label>
+            </input>
+
+            <br/>
+            <br/>
+
+            <input type="radio" id="toggle-on" name="toggle" checked><label for="toggle-on">On</label> |
+            <input type="radio" id="toggle-off" name="toggle"><label for="toggle-off">Off</label>
+            <br/>
+            <br/>

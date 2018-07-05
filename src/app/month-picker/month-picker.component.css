@@ -1,0 +1,34 @@
+.month-section {
+}
+
+#month-picker select {
+  width: 100%;
+  height: 30px;
+  font-family: cursive;
+  font-size: 15px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #F7F7F7;
+
+  /*text-align-last: center;*/
+  padding-left: 40%;
+  /*direction: rtl;*/
+
+}
+
+#month-picker select:focus {
+  outline: none;
+}
+
+#month-picker select option {
+  /*padding-top: 10px;*/
+  /*background-color: #F7F7F7;*/
+}
+
+#month-picker select option:hover {
+  font-weight: bold;
+}
+
+
+

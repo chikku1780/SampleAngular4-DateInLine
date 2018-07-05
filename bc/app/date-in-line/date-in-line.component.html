@@ -1,0 +1,35 @@
+<div id="date-in-line" class="date-inline">
+  <div class="row">
+    <div class="col-md-6"></div>
+    <div class="col-md-1">
+      <div class="row">
+        <app-month-picker class="col-md-6 no-padding"
+                          [(month)]="month"
+                          [monthList]="monthList"
+                          (change)="onMonthChange($event.target.value)">
+
+        </app-month-picker>
+        <app-year-picker class="col-md-6 no-padding"
+                         [(year)]="year"
+                         [yearList]="yearList"
+                         (change)="onYearChange($event.target.value)">
+        </app-year-picker>
+      </div>
+      <div class="col-md-5"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <app-day-picker class="pull-right"
+        [(todayDay)]="todayDay"
+        [(day)]="day"
+        [(dateRange)]="dateRange"
+        (clickedPrev)="prevDayParent($event)"
+        (clickedNext)="nextDayParent($event)"
+        (change)="onDayChange($event.target.value)">
+      </app-day-picker>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-5"></div>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+<div id="year-picker" class="year-section">
+  <!--<label for="pick-month"></label>-->
+  <select id="year-select" class="year-select form-control-sm">
+    <option class="year-option" *ngFor="let y of yearList" [selected]="(year === y)">{{y}}</option>
+  </select>
+</div>

@@ -1,0 +1,89 @@
+/*!* The container *!*/
+.container {
+  display: inline;
+  cursor: pointer;
+  margin: 1px 2px;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid cadetblue;
+}
+
+/*!* Hide the browser's default radio button *!*/
+/*.container input {*/
+  /*position: inherit;*/
+  /*opacity: 0;*/
+  /*cursor: pointer;*/
+  /*margin: 1px 2px;*/
+  /*padding: 5px;*/
+  /*text-align: center;*/
+  /*border: 1px solid cadetblue;*/
+/*}*/
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked + label,
+input[type="radio"].checked + label {
+  /* Do something special with the selected state */
+  color: red;
+  background: blue;
+  background-image: linear-gradient(to top,#969696,#727272);
+  box-shadow: inset 0 1px 6px rgba(41, 41, 41, 0.2),
+  0 1px 2px rgba(0, 0, 0, 0.05);
+  cursor: default;
+  color: #E6E6E6;
+  border-color: transparent;
+  text-shadow: 0 1px 1px rgba(40, 40, 40, 0.75);
+}
+
+
+input[type="radio"]:checked + label {
+  background-image: linear-gradient(to top,#969696,#727272);
+  box-shadow: inset 0 1px 6px rgba(41, 41, 41, 0.2),
+  0 1px 2px rgba(0, 0, 0, 0.05);
+  cursor: default;
+  color: #E6E6E6;
+  border-color: transparent;
+  text-shadow: 0 1px 1px rgba(40, 40, 40, 0.75);
+}
+
+input[type="radio"] + label {
+  width: 3em;
+}
+
+input[type="radio"]:checked + label.btn:hover {
+  background-color: inherit;
+  background-position: 0 0;
+  transition: none;
+}
+
+input[type="radio"] + label {
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+input[type="radio"] + label {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+
+body {
+  font-family:sans-serif;
+}
+
+<!--<div>-->
+<!--<span class="glyphicon glyphicon-chevron-left clickable" aria-hidden="true" (click)="prevDay()"> PREV </span>-->
+<!--<button type="button" *ngFor="let number of [-2,-1,0,1,2,3,4,5,6,7];"-->
+<!--[ngClass]="{'date-active': true}"-->
+<!--class="selected-date-btn" (click)="selectDateBtnClicked(selectedDate + number)">-->
+<!--{{ selectedDate + number }}-->
+<!--</button>-->
+<!--<span class="glyphicon glyphicon-chevron-right clickable" aria-hidden="true" (click)="nextDay()"> NEXT </span>-->
+<!--</div>-->
+
+
+
+id="day-picker"

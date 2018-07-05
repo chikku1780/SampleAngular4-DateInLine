@@ -1,0 +1,20 @@
+#date-inline {
+  margin: 0;
+}
+
+#date-in-line .row {
+  margin: 0px 0px 0px;
+}
+
+#date-in-line .no-padding {
+  padding: 0;
+}
+
+#date-in-line .padding-side-5 {
+  padding: 0 5px;
+}
+
+#date-in-line .pull-right {
+  float: right;
+}
+

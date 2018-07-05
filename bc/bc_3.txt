@@ -1,0 +1,8 @@
+(click)="clicked();"
+
+clicked() {
+    console.log(this.day);
+  }
+
+      <span [ngClass]="{'today-day': (_day === todayDay)}">{{_day}} - {{(_day === day)}}</span>
+

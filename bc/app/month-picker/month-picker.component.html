@@ -1,0 +1,8 @@
+<div id="month-picker" class="month-section">
+  <!--<label for="pick-month"></label>-->
+  <select id="pick-month" class="form-control-sm">
+    <option *ngFor="let mon of monthList" [selected]="(month === mon.value.seq)" [value]="mon.value.seq">
+      {{mon.name}}
+    </option>
+  </select>
+</div>

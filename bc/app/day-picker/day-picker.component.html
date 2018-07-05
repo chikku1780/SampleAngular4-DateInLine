@@ -1,0 +1,15 @@
+<div id="day-picker" class="date-section">
+  <span class="btn btn-sm btn-dark btn-outline-info glyphicon glyphicon-chevron-left clickable" aria-hidden="true"
+       (click)="prevDay()"> PREV
+  </span>
+  <span class="dates-only">
+    <label class="date-button" *ngFor="let _day of dateRange;">
+      <input type="radio" name="day" [value]="_day" [checked]="(_day === day)" class="form-control">
+      <span [ngClass]="{'today-day': (_day === todayDay)}">{{_day}}</span>
+    </label>
+  </span>
+  <span class="btn btn-sm btn-dark btn-outline-info glyphicon glyphicon-chevron-right clickable" aria-hidden="true"
+       (click)="nextDay()"> NEXT
+  </span>
+</div>
+

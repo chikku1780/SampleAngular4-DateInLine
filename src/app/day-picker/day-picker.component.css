@@ -1,0 +1,83 @@
+#day-picker {
+  margin-top: 15px;
+  padding: 0px;
+}
+
+#day-picker .row {
+  margin: 0;
+}
+
+#day-picker .arrow-mark {
+  display: inline-block;
+  margin: 5px 0px 5px;
+  padding: 5px;
+  width: 2.5%;
+}
+
+#day-picker .dates-only {
+  display: inline-block;
+  width: 93%;
+  margin: 0 10px;
+  padding: 0 5px;
+}
+
+#day-picker .date-button {
+  /*float:left;*/
+  /*background-color: #EFEFEF;*/
+  /*overflow: auto;*/
+  margin: 0px 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#day-picker .date-text-section {
+  display: inline-block;
+  padding: 2px 8px;
+  border: 1px solid #e5e5e5;
+}
+
+#day-picker .date-number {
+  display: inline-block;
+  text-align: center;
+  padding: 4px 6px;
+  /*border-radius: 50%;*/
+  /*border: 1px solid #e5e5e5;*/
+}
+
+#day-picker .date-name {
+  display: inline-block;
+  text-align: center;
+}
+
+#day-picker input:checked + span.date-text-section {
+  background-color: #404040;
+  color: #F7F7F7;
+}
+
+#day-picker input:checked + span.date-text-section.today-day {
+  background-color: red;
+  color: #F7F7F7;
+  /*color: red;*/
+}
+
+#day-picker input:checked + span.date-text-section span.date-number {
+  /*text-decoration: underline;*/
+  /*background-color: #404040;*/
+  color: #F7F7F7;
+}
+
+#day-picker input:checked + span.date-text-section span.date-name {
+  /*text-decoration: underline;*/
+}
+
+.pull-right {
+  float: right;
+}
+
+#day-picker input[type="radio"] {
+  display: none;
+}
+
+#day-picker .today-day {
+  color: red;
+}

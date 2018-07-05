@@ -1,0 +1,32 @@
+<div id="date-in-line" class="date-inline">
+  <div class="row">
+    <div class="col-md-8"></div>
+    <div class="col-md-4">
+      <div class="row">
+        <app-month-picker class="col-md-6 col-sm-12 padding-side-5"
+                          [(month)]="month"
+                          [monthList]="monthList"
+                          (change)="onMonthChange($event.target.value)">
+
+        </app-month-picker>
+        <app-year-picker class="col-md-6 col-sm-12 padding-side-5"
+                         [(year)]="year"
+                         [yearList]="yearList"
+                         (change)="onYearChange($event.target.value)">
+        </app-year-picker>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <app-day-picker class=""
+                      [(todayDay)]="todayDay"
+                      [(day)]="day"
+                      [(dateRange)]="dateRange"
+                      (clickedPrev)="prevDayParent($event)"
+                      (clickedNext)="nextDayParent($event)"
+                      (change)="onDayChange($event.target.value)">
+      </app-day-picker>
+    </div>
+  </div>
+</div>

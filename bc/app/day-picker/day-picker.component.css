@@ -1,0 +1,49 @@
+#day-picker {
+  width: 100%;
+}
+
+#day-picker label {
+  /*float:left;*/
+  /*background-color: #EFEFEF;*/
+  /*overflow: auto;*/
+  margin: 1px 5px;
+  cursor: pointer;
+}
+
+#day-picker label span {
+  text-align: center;
+  padding: 4px 6px 2px;
+  display: block;
+  border-radius: 50%;
+  border: 1px solid #e5e5e5;
+}
+
+#day-picker input:checked + span {
+  background-color: #404040;
+  color: #F7F7F7;
+}
+
+#day-picker input[type="radio"] {
+  display: none;
+}
+
+#day-picker .today-day {
+  color: #F7F7F7;
+  background-color: red;
+}
+
+.date-section {
+  padding: 0;
+}
+
+.dates-only {
+  margin: 0px 5px;
+}
+
+.date-button {
+  /*margin: 0 10px;*/
+}
+
+.pull-right {
+  float: right;
+}
